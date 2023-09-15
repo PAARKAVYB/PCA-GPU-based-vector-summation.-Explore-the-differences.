@@ -1,7 +1,7 @@
 # PCA-GPU-based vector summation. Explore the differences.
-i) Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution confi guration of block.x = 1024. Try to explain the difference and the reason.
+i) Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution configuration of block.x = 1024. Try to explain the difference and the reason.
 
-ii) Refer to sumArraysOnGPU-timer.cu, and let block.x = 256. Make a new kernel to let each thread handle two elements. Compare the results with other execution confi gurations.
+ii) Refer to sumArraysOnGPU-timer.cu, and let block.x = 256. Make a new kernel to let each thread handle two elements. Compare the results with other execution configurations.
 ## AIM:
 (i) To modify or set the execution configuration of block.x as 1023 & 1024 and compare the elapsed time obtained on Host and GPU.
 
@@ -11,15 +11,15 @@ ii) Refer to sumArraysOnGPU-timer.cu, and let block.x = 256. Make a new kernel t
 ### STEP 1 :
 Include the required files and library.
 ### STEP 2 :
-Declare a function sumMatrixOnHost , to perform vector summation on the host side .
+Declare a function sumMatrixOnHost, to perform vector summation on the host side.
 ### STEP 3 :
 Declare a function with __ global __ , which is a CUDA C keyword , to execute the function to perform vector summation on GPU .
 ### STEP 4 :
-Declare Main method/function . In the Main function Set up device and data size of vector ,Allocate Host Memory and device global memory,Initialize data at host side and then add vector at host side ,transfer data from host to device.
+Declare Main method/function. In the Main function Set up device and data size of vector, Allocate Host Memory and device global memory,Initialize data at host side and then add vector at host side,transfer data from host to device.
 ### STEP 5 :
-Invoke kernel at host side(1023,1024,256), check for kernel error and copy kernel result back to host side.
+Invoke kernel at host side (1023,1024,256), check for kernel error and copy kernel result back to host side.
 ### STEP 6 :
-Finally Free device global memory,host memory and reset device.
+Finally Free device global memory, host memory and reset device.
 ### STEP 7 :
 Save and Run the Program.
 
